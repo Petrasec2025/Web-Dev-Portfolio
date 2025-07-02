@@ -51,3 +51,4 @@ You can clone and view this site on your local machine:
 git clone https://github.com/Petrasec2025/Web-Dev-Portfolio.git
 cd Web-Dev-Portfolio
 open index.html
+
