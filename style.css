@@ -1,9 +1,11 @@
+/* === Animated Background === */
 @keyframes animatedBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
+/* === Icon Animations === */
 @keyframes icon-bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
@@ -14,19 +16,33 @@
   to { transform: rotate(360deg); }
 }
 
+/* === Global Reset and Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: linear-gradient(-45deg, #220066, #3d0099, #0066cc, #3d0099);
   background-size: 400% 400%;
   animation: animatedBG 15s ease infinite;
   color: #f8f8f8;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   transition: all 0.3s ease;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
+/* === Header and Footer === */
 header, footer {
   background-color: #3d0099;
   color: #fff;
@@ -40,12 +56,15 @@ header, footer {
 footer {
   justify-content: center;
   font-weight: 600;
+  font-size: 0.9rem;
 }
 
+/* Dark mode header/footer */
 .dark-mode header, .dark-mode footer {
   background-color: #0055cc;
 }
 
+/* === Navigation === */
 .nav-toggle {
   font-size: 2rem;
   background: none;
@@ -57,11 +76,11 @@ footer {
 }
 
 .nav-toggle.hamburger::after {
-  content: "\2630";
+  content: "\2630"; /* ☰ */
 }
 
 .nav-toggle.cross::after {
-  content: "\2716";
+  content: "\2716"; /* ✖ */
 }
 
 nav {
@@ -102,6 +121,7 @@ nav a.active {
   font-weight: bold;
 }
 
+/* Settings Panel */
 .settings-panel {
   margin-top: 0.3rem;
   background: #222;
@@ -130,12 +150,14 @@ nav a.active {
   font-weight: bold;
   width: 100%;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .settings-panel button:hover {
   background: #5a00cc;
 }
 
+/* === Main Content === */
 main {
   max-width: 900px;
   margin: 5rem auto 2rem;
@@ -153,6 +175,12 @@ h2 {
   padding-bottom: 0.3rem;
 }
 
+h3 {
+  color: #00ffff;
+  margin-bottom: 1rem;
+}
+
+/* === Buttons === */
 .btn {
   background: #3d0099;
   color: #fff;
@@ -162,12 +190,14 @@ h2 {
   border: none;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
   background: #5a00cc;
 }
 
+/* === Cards Container === */
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -175,24 +205,29 @@ h2 {
   margin-top: 1rem;
 }
 
+/* === Cards === */
 .card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 1rem;
   flex: 1 1 280px;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  opacity: 0.95;
 }
 
 .card:hover {
-  box-shadow: 0 5px 15px #a020f0aa;
-  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(160, 32, 240, 0.3);
+  transform: translateY(-7px);
+  opacity: 1;
 }
 
+/* Dark mode card */
 .dark-mode .card {
   background: rgba(0, 51, 153, 0.8);
   color: #ccf;
 }
 
+/* === Profile Image === */
 .profile-img {
   width: 120px;
   height: 120px;
@@ -211,9 +246,55 @@ h2 {
   outline: none;
 }
 
-/* Social Icons Animation */
+/* === Skill Circles with Glow === */
+.circle-glow {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  background: #111;
+  color: #00ffff;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  animation: pulseGlow 2s infinite ease-in-out;
+  margin-left: 10px;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 5px #00ffff;
+  }
+  50% {
+    box-shadow: 0 0 20px #00ffff;
+  }
+  100% {
+    box-shadow: 0 0 5px #00ffff;
+  }
+}
+
+/* === Lists Styling === */
+.skills, .core, .languages, .experience, .interests {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0.5rem 0;
+}
+
+ul.interests {
+  list-style-type: circle;
+  padding-left: 1.2rem;
+}
+
+.skills li, .core li, .languages li, .experience li, .interests li {
+  margin-bottom: 0.5rem;
+}
+
+/* === Social Icons === */
 .social-icons {
   text-align: center;
+  margin-top: 1rem;
 }
 
 .icon-btn {
@@ -222,6 +303,7 @@ h2 {
   margin: 0 0.7rem;
   color: #ffdd57;
   transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
 }
 
 .icon-btn:hover {
@@ -234,12 +316,12 @@ h2 {
   color: #5a00cc;
 }
 
-/* Accessibility visible focus state */
 .icon-btn:focus {
   outline: 3px dashed #ffdd57;
   animation: none;
 }
 
+/* === Accessibility and Utility === */
 .readable-text {
   font-size: 1.2rem;
   line-height: 1.7;
@@ -250,7 +332,25 @@ h2 {
   color: #fff !important;
 }
 
-section.delayed {
-  opacity: 0;
-  transition: opacity 1s ease-in;
+/* === Responsive === */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+  }
+
+  .header-center {
+    display: none;
+  }
 }
+
