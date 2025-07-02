@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Petrasec – Petras Guilherme Kulyumba</title>
+
+  <!-- ✅ Boxicons for Icons (Replaces Font Awesome) -->
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <button id="nav-toggle" aria-label="Toggle navigation" class="nav-toggle hamburger"></button>
+      <nav id="navbar" aria-label="Primary navigation" class="hidden">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About Me</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#blog" class="nav-link">Blog</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button id="settings-link" class="nav-link settings-link" aria-haspopup="true" aria-expanded="false" type="button">
+          Settings ▼
+        </button>
+        <div id="settings-panel" class="settings-panel hidden" role="region" aria-label="Settings Panel">
+          <button id="toggle-dark-mode" type="button">Toggle Dark Mode</button>
+          <button id="toggle-readable-text" type="button">Toggle Readable Text</button>
+          <button id="toggle-solid-colors" type="button">Toggle Solid Colors</button>
+        </div>
+      </nav>
+    </div>
+    <div class="header-center" id="current-section" aria-live="polite" aria-atomic="true">Home</div>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <h2 id="dynamic-banner" aria-live="polite" aria-atomic="true"></h2>
+      <button id="read-more-btn" class="btn" aria-label="Read more about me">Read More</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" tabindex="-1" aria-label="About Me Section">
+      <h2>About Me</h2>
+      <img src="Profile.jpeg" alt="Petras Profile" class="profile-img" />
+      <p>I’m a Certified Cybersecurity Professional with practical experience in ethical hacking, penetration testing, SOC operations, and vulnerability assessments.</p>
+      <p>I hold CEH and CompTIA Security+ certifications and am completing my BSc in Cybersecurity at Bath Spa University RAK.</p>
+
+      <div class="cards-container">
+        <article class="card" aria-label="Key Skills">
+          <h3>Key Skills</h3>
+          <ul class="skills">
+            <li><strong>Penetration Testing:</strong> ⚫⚫⚫⚫⚪ (80%)</li>
+            <li><strong>Vulnerability Assessment:</strong> ⚫⚫⚫⚫⚪ (75%)</li>
+            <li><strong>Threat Detection:</strong> ⚫⚫⚫⚪⚪ (65%)</li>
+            <li><strong>Malware Analysis:</strong> ⚫⚫⚫⚪⚪ (60%)</li>
+            <li><strong>SIEM Tools:</strong> ⚫⚫⚫⚪⚪ (60%)</li>
+            <li><strong>Python:</strong> ⚫⚫⚫⚪⚪ (60%)</li>
+            <li><strong>Bash:</strong> ⚫⚫⚪⚪⚪ (40%)</li>
+          </ul>
+        </article>
+
+        <article class="card" aria-label="Core Strengths">
+          <h3>Core Strengths</h3>
+          <ul class="core">
+            <li>🧠 Analytical Thinking</li>
+            <li>🔁 Adaptability</li>
+            <li>🤝 Team Collaboration</li>
+          </ul>
+        </article>
+
+        <article class="card" aria-label="Languages">
+          <h3>🌍 Languages</h3>
+          <ul class="languages">
+            <li>🇲🇿 Portuguese – Native</li>
+            <li>🇬🇧 English – Fluent</li>
+            <li>🧠 Learning: Arabic, French, Spanish, Japanese, Chinese, German, Russian</li>
+          </ul>
+        </article>
+
+        <article class="card" aria-label="Experience">
+          <h3>Experience</h3>
+          <ul class="experience">
+            <li>✅ CEH Labs – Edoxi Institute (Feb 2024 – May 2024)</li>
+            <li>🕵️ SOC Analyst Live Labs – (2024 – Present)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" tabindex="-1" aria-label="Projects Section">
+      <h2>Projects</h2>
+      <p>Explore my GitHub repositories showcasing hands-on labs and cybersecurity demos.</p>
+      <a href="https://github.com/Petrasec2025/Petrasec2025/blob/main/README.md" target="_blank" class="btn" rel="noopener noreferrer">Visit GitHub</a>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" tabindex="-1" aria-label="Blog Section">
+      <h2>Blog</h2>
+      <p>I’m building a YouTube channel where I share my journey in cybersecurity and offer mentorship on CEH, penetration testing, and SOC practices.</p>
+      <a href="https://www.youtube.com/@Petrasec2025" target="_blank" class="btn" rel="noopener noreferrer">Visit YouTube</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" tabindex="-1" aria-label="Contact Section">
+      <h2>Contact</h2>
+      <div class="social-icons">
+        <a href="mailto:petrasec.cyber@gmail.com" title="Email" aria-label="Send email" class="icon-btn"><i class='bx bx-envelope'></i></a>
+        <a href="https://github.com/Petrasec2025/Petrasec2025" target="_blank" title="GitHub" aria-label="GitHub profile" rel="noopener noreferrer" class="icon-btn"><i class='bx bxl-github'></i></a>
+        <a href="https://www.youtube.com/@Petrasec2025" target="_blank" title="YouTube" aria-label="YouTube channel" rel="noopener noreferrer" class="icon-btn"><i class='bx bxl-youtube'></i></a>
+        <a href="https://linkedin.com/in/petras-cyber" target="_blank" title="LinkedIn" aria-label="LinkedIn profile" rel="noopener noreferrer" class="icon-btn"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://wa.me/971544560861" target="_blank" title="WhatsApp" aria-label="WhatsApp chat" rel="noopener noreferrer" class="icon-btn"><i class='bx bxl-whatsapp'></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Petrasec — Where Cybersecurity Meets the Future</p>
+  </footer>
+</body>
+</html>
