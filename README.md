@@ -24,7 +24,7 @@
 
 ## 🖥️ Live Demo
 
-➡️ [View Live Portfolio](https://petrasec2025.github.io)
+➡️ [View Live Portfolio](https://petrasec2025.github.io/Web-Dev-Portfolio/)
 
 ## 📌 Key Sections
 
