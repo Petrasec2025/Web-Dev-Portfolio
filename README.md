@@ -1,54 +1,64 @@
-# 🌐 Web Dev Portfolio – HTML, CSS & JavaScript
+# 🔒 PeTsec | Cybersecurity Portfolio
 
-Hi! I’m **Petras Guilherme Kulyumba**, and this is my personal portfolio website. I created this project to showcase my **web development skills**, **cybersecurity interests**, and my **tech learning journey**.
+![Portfolio Preview](https://raw.githubusercontent.com/Petrasec2025/portfolio/main/assets/screenshot.png)
 
-This website reflects my ability to build clean, responsive, and interactive front-end projects using modern web technologies.
+> Professional portfolio showcasing my cybersecurity expertise and web development skills
 
----
+## 🌟 Features
 
-## 🧰 Technologies Used
+- **Purple Team Focus**: Showcases both offensive & defensive security skills
+- **Interactive Terminal**: JavaScript-powered CLI simulation in hero section
+- **Dynamic Skills Visualization**: Animated progress bars for technical competencies
+- **Project Showcase**: Highlighting TryHackMe, HackTheBox, and security labs
+- **Theme Switching**: Dark/light mode with localStorage persistence
+- **Mobile Responsive**: Fully adaptive design for all devices
 
-| Technology | Purpose                            |
-|------------|------------------------------------|
-| HTML5      | Page structure and semantic markup |
-| CSS3       | Styling, layout, and responsiveness|
-| JavaScript | Interactivity and DOM manipulation |
+## 🛠 Tech Stack
 
----
+| Category       | Technologies |
+|----------------|--------------|
+| **Frontend**   | HTML5, CSS3, JavaScript |
+| **Styling**    | CSS Grid, Flexbox, Animations |
+| **Security**   | CEH, Security+ concepts |
+| **Tools**      | Git, VS Code, Burp Suite, Metasploit |
 
-## 🗂 Website Sections
+## 🖥️ Live Demo
 
-| Section   | Description                                                                 |
-|-----------|-----------------------------------------------------------------------------|
-| Home      | Intro section to welcome visitors and set the tone                          |
-| About Me  | A brief introduction, background story, and core technical skills           |
-| Projects  | A curated portfolio of my web and cybersecurity projects                    |
-| Blog      | Upcoming section for tutorials, reflections, and insights                   |
-| Contact   | Simple contact form and professional details to reach out                   |
+➡️ [View Live Portfolio](https://petrasec2025.github.io)
 
----
+## 📌 Key Sections
 
-## 👨‍💻 About Me
+1. **Hero Section**  
+   - Terminal-style introduction
+   - Rotating role animations (Threat Hunter, Pentester, etc.)
 
-I'm a passionate web developer and cybersecurity student, building a path in tech through hands-on learning and real-world projects. I enjoy bringing ideas to life in the browser while keeping performance and security in mind.
+2. **About Me**  
+   - Professional background
+   - Certification progress (CEH, CySA+)
+   - Purple Team methodology
 
-### 💡 My Key Skills Include:
+3. **Skills Matrix**  
+   - Offensive Security (Pen Testing, Web App Security)
+   - Defensive Security (SIEM, Incident Response)
+   - Development (Python, Bash)
 
-- Semantic HTML and accessible markup  
-- Responsive CSS with animations  
-- JavaScript for interactivity  
-- Git & GitHub for version control  
-- Project deployment practices  
-- Cybersecurity awareness for secure web development
+4. **Projects**  
+   - Vulnerability Assessments
+   - Web App Pentests
+   - Threat Intelligence Automation
 
----
+5. **Contact**  
+   - Professional contact form
+   - Direct social links
 
-## 🚀 How to Run Locally
-
-You can clone and view this site on your local machine:
+## 🚀 Installation
 
 ```bash
-git clone https://github.com/Petrasec2025/Web-Dev-Portfolio.git
-cd Web-Dev-Portfolio
-open index.html
+# Clone repository
+git clone https://github.com/Petrasec2025/portfolio.git
 
+# Navigate to project
+cd portfolio
+
+# Open in browser (use Live Server for best experience)
+open index.html
