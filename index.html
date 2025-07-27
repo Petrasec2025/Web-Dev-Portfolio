@@ -1,133 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Petrasec – Petras Guilherme Kulyumba</title>
-
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeTsec | Cybersecurity Professional</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Dark Mode Toggle -->
+  <div class="dark-mode-toggle">
+    <i class="fas fa-moon"></i>
+  </div>
+
+  <!-- Navigation -->
   <header>
-    <div class="header-left">
-      <button id="nav-toggle" aria-label="Toggle navigation" class="nav-toggle hamburger"></button>
-      <nav id="navbar" aria-label="Primary navigation" class="hidden">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">About Me</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#blog" class="nav-link">Blog</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <button id="settings-link" class="nav-link settings-link" aria-haspopup="true" aria-expanded="false" type="button">
-          Settings ▼
-        </button>
-        <div id="settings-panel" class="settings-panel hidden" role="region" aria-label="Settings Panel">
-          <button id="toggle-dark-mode" type="button">Toggle Dark Mode</button>
-          <button id="toggle-readable-text" type="button">Toggle Readable Text</button>
-          <button id="toggle-solid-colors" type="button">Toggle Solid Colors</button>
-        </div>
-      </nav>
-    </div>
-    <div class="header-center" id="current-section" aria-live="polite" aria-atomic="true">Home</div>
+    <nav class="navbar">
+      <div class="logo">PeTsec</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
   </header>
 
-  <main>
-    <!-- Home Section -->
-    <section id="home">
-      <h2 id="dynamic-banner" aria-live="polite" aria-atomic="true"></h2>
-      <button id="read-more-btn" class="btn" aria-label="Read more about me">Read More</button>
-    </section>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Petras Kulyumba</h1>
+      <h2 class="hero-subtitle">Cybersecurity Analyst | Purple Team Passionate</h2>
+      <div class="rotating-titles">
+        <span>Future CISO</span>
+        <span>Security Researcher</span>
+        <span>Threat Hunter</span>
+        <span>Penetration Tester</span>
+      </div>
+      <p class="hero-text">Bridging offensive and defensive security to build resilient systems</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Contact Me</a>
+        <a href="#projects" class="btn btn-secondary">View Projects</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-buttons">
+            <span class="terminal-btn red"></span>
+            <span class="terminal-btn yellow"></span>
+            <span class="terminal-btn green"></span>
+          </div>
+          <div class="terminal-title">root@PeTsec:~</div>
+        </div>
+        <div class="terminal-body">
+          <p>$ whoami</p>
+          <p>Petras_Kulyumba</p>
+          <p>$ cat about_me.txt</p>
+          <p>CEH | Security+ | Future CISO</p>
+          <p>Purple Team | SOC | Threat Intel| Junior Penetration Tester</p>
+          <p>$ <span class="cursor">█</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" tabindex="-1" aria-label="About Me Section">
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="section-header">
       <h2>About Me</h2>
-      <img src="Profile.jpeg" alt="Petras Profile" class="profile-img" />
-      <p>I’m a Certified Cybersecurity Professional with practical experience in ethical hacking, penetration testing, SOC operations, and vulnerability assessments.</p>
-      <p>I hold CEH and CompTIA Security+ certifications and am completing my BSc in Cybersecurity at Bath Spa University RAK.</p>
-
-      <div class="cards-container">
-        <!-- Key Skills -->
-        <article class="card" aria-label="Key Skills">
-          <h3>Key Skills</h3>
-          <ul class="skills">
-            <li><strong>Penetration Testing:</strong> <span class="circle-glow">80%</span></li>
-            <li><strong>Vulnerability Assessment:</strong> <span class="circle-glow">75%</span></li>
-            <li><strong>Threat Detection:</strong> <span class="circle-glow">65%</span></li>
-            <li><strong>Malware Analysis:</strong> <span class="circle-glow">60%</span></li>
-            <li><strong>SIEM Tools:</strong> <span class="circle-glow">60%</span></li>
-            <li><strong>Python:</strong> <span class="circle-glow">60%</span></li>
-            <li><strong>Bash:</strong> <span class="circle-glow">40%</span></li>
-          </ul>
-        </article>
-
-        <!-- Core Strengths + Languages -->
-        <article class="card" aria-label="Strengths and Languages">
-          <h3>Core Strengths & Languages</h3>
-          <ul class="core">
-            <li>Analytical Thinking</li>
-            <li>Adaptability</li>
-            <li>Team Collaboration</li>
-          </ul>
-          <ul class="languages">
-            <li>Portuguese – Native</li>
-            <li>English – Fluent</li>
-            <li>Learning: Arabic, French, Spanish, Japanese, Chinese, German, Russian</li>
-          </ul>
-        </article>
-
-        <!-- Experience -->
-        <article class="card" aria-label="Experience">
-          <h3>Experience</h3>
-          <ul class="experience">
-            <li>CEH Labs – Edoxi Institute (Feb 2024 – May 2024)</li>
-            <li>SOC Analyst Live Labs – (2024 – Present)</li>
-          </ul>
-        </article>
-
-        <!-- Hobbies & Interests -->
-        <article class="card" aria-label="Hobbies and Interests">
-          <h3>Hobbies & Interests</h3>
-          <ul class="interests">
-            <li><strong>Sports:</strong> Swimming and basketball – promoting discipline and focus</li>
-            <li><strong>Reading:</strong> Passionate about cybersecurity trends and AI advancements</li>
-            <li><strong>Community Involvement:</strong> Active participant in DEFCON forums and local tech meetups</li>
-            <li><strong>Labs & Challenges:</strong> Engaged in hands-on cybersecurity labs via Hack The Box, TryHackMe, and LetsDefend</li>
-          </ul>
-        </article>
+      <div class="section-divider"></div>
+    </div>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="profile.jpeg" alt="Petras Kulyumba" class="profile-img">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>Open to work</span>
+        </div>
       </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" tabindex="-1" aria-label="Projects Section">
-      <h2>Projects</h2>
-      <p>Explore my GitHub repositories showcasing hands-on labs and cybersecurity demos.</p>
-      <a href="https://github.com/Petrasec2025/Petrasec2025/blob/main/README.md" target="_blank" class="btn" rel="noopener noreferrer">Visit GitHub</a>
-    </section>
-
-    <!-- Blog -->
-    <section id="blog" tabindex="-1" aria-label="Blog Section">
-      <h2>Blog</h2>
-      <p>I’m building a YouTube channel where I share my journey in cybersecurity and offer mentorship on CEH, penetration testing, and SOC practices.</p>
-      <a href="https://www.youtube.com/@Petrasec2025" target="_blank" class="btn" rel="noopener noreferrer">Visit YouTube</a>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" tabindex="-1" aria-label="Contact Section">
-      <h2>Contact</h2>
-      <div class="social-icons">
-        <a href="mailto:petrasec.cyber@gmail.com" title="Email" aria-label="Send email" class="icon-btn"><i class='bx bx-envelope'></i></a>
-        <a href="https://github.com/Petrasec2025/Petrasec2025" target="_blank" title="GitHub" aria-label="GitHub profile" rel="noopener noreferrer" class="icon-btn"><i class='bx bxl-github'></i></a>
-        <a href="https://www.youtube.com/@Petrasec2025" target="_blank" title="YouTube" aria-label="YouTube channel" rel="noopener noreferrer" class="icon-btn"><i class='bx bxl-youtube'></i></a>
-        <a href="https://linkedin.com/in/petras-cyber" target="_blank" title="LinkedIn" aria-label="LinkedIn profile" rel="noopener noreferrer" class="icon-btn"><i class='bx bxl-linkedin'></i></a>
-        <a href="https://wa.me/971544560861" target="_blank" title="WhatsApp" aria-label="WhatsApp chat" rel="noopener noreferrer" class="icon-btn"><i class='bx bxl-whatsapp'></i></a>
+      <div class="about-text">
+        <h3>Future CISO | Cybersecurity Professional | Purple Team Passionate</h3>
+        <p>Hello! I'm Petras Guilherme Kulyumba, a passionate cybersecurity professional specializing in both offensive (Red Team) and defensive (Blue Team) security operations. With certifications in Certified Ethical Hacker (CEH) and CompTIA Security+, and currently pursuing CySA+ and ISC2 CC, I'm committed to mastering threat detection, incident response, and Security Operations Center (SOC) workflows.</p>
+  <p>My interest in cybersecurity stems from a deep curiosity about how systems are attacked and defended. I bridge the gap between Red and Blue teams a true Purple Team approach, leveraging offensive tactics to strengthen defensive strategies. My goal is to become a Chief Information Security Officer (CISO) and help organizations build secure and resilient infrastructures.</p>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <i class="fas fa-trophy"></i>
+            <h4>Hands-On Experience</h4>
+            <ul>
+              <li>Ranked in the top 5% on TryHackMe </li>
+              <li>Completed CEH labs</li>
+              <li>pursing cysa+ through CompTia labs & HackTheBox</li>
+            </ul>
+          </div>
+          <div class="highlight-card">
+            <i class="fas fa-bullseye"></i>
+            <h4>Career Focus</h4>
+            <ul>
+              <li>SOC Analysis</li>
+              <li>Cyber Threat Intelligence</li>
+              <li>Penetration Testing</li>
+            </ul>
+          </div>
+          <div class="highlight-card">
+            <i class="fas fa-handshake"></i>
+            <h4>Let's Connect</h4>
+            <p>I share my projects and lab work on GitHub and am building a YouTube channel to raise awareness and educate others in cybersecurity.</p>
+          </div>
+        </div>
+        
+        <p class="about-final">Together, let's build a safer digital future  one system at a time.</p>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="section-header">
+      <h2>Technical Skills</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3><i class="fas fa-terminal"></i> Offensive Security</h3>
+        <div class="skill-item">
+          <span>Penetration Testing</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span>Web App Security</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span>Network Security</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h3><i class="fas fa-shield-virus"></i> Defensive Security</h3>
+        <div class="skill-item">
+          <span>SIEM Monitoring</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span>Incident Response</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width: 75%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span>Threat Intelligence</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width: 70%"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h3><i class="fas fa-code"></i> Development</h3>
+        <div class="skill-item">
+          <span>Python</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width: 75%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span>Bash Scripting</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width: 65%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span>Security Automation</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width: 70%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="section-header">
+      <h2>Experience & Education</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2025 - Present</div>
+        <div class="timeline-content">
+          <h3>SOC Analyst Live Labs</h3>
+          <p>Hands-on experience with SIEM monitoring, log analysis, and incident response in simulated SOC environments.</p>
+          <ul>
+            <li>Performed alert triage and investigation</li>
+            <li>Worked with MITRE ATT&CK framework</li>
+            <li>Analyzed phishing campaigns and malware</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Feb 2024 - May 2024</div>
+        <div class="timeline-content">
+          <h3>CEH Labs - Edoxi Institute</h3>
+          <p>Completed practical ethical hacking labs covering various attack vectors and countermeasures.</p>
+          <ul>
+            <li>System hacking and exploitation</li>
+            <li>Web application penetration testing</li>
+            <li>Network security assessments</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2023 - Present</div>
+        <div class="timeline-content">
+          <h3>BSc (Hons) Cybersecurity - Bath Spa University RAK</h3>
+          <p>Comprehensive cybersecurity education covering both theoretical and practical aspects.</p>
+          <ul>
+            <li>Completed modules: Cyber Resilience, Networking, Digital Forensics</li>
+            <li>Upcoming: Cyber Offense & Defense, IoT Security</li>
+            <li>Research focus on purple teaming methodologies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="certifications">
+      <h3>Certifications</h3>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <i class="fas fa-certificate"></i>
+          <h4>Certified Ethical Hacker (CEH)</h4>
+          <p>EC-Council</p>
+        </div>
+        <div class="cert-card">
+          <i class="fas fa-certificate"></i>
+          <h4>CompTIA Security+</h4>
+          <p>CompTIA</p>
+        </div>
+        <div class="cert-card">
+          <i class="fas fa-spinner"></i>
+          <h4>CompTIA CySA+</h4>
+          <p>In Progress</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="section-header">
+      <h2>Projects & Labs</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image" style="background-image: url('project1.jpg');">
+          <div class="project-tags">
+            <span>Penetration Testing</span>
+            <span>Metasploit</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Vulnerability Assessment Lab</h3>
+          <p>Conducted comprehensive vulnerability assessments using Metasploit and Nessus to identify and exploit system vulnerabilities.</p>
+          <a href=" https://tryhackme.com/p/Petras20" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image" style="background-image: url('project2.jpg');">
+          <div class="project-tags">
+            <span>Web Security</span>
+            <span>Burp Suite</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Web App Penetration Test</h3>
+          <p>Performed security testing on DVWA using Burp Suite to identify and mitigate web application vulnerabilities.</p>
+          <a href=" https://tryhackme.com/p/Petras20" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image" style="background-image: url('project3.jpg');">
+          <div class="project-tags">
+            <span>Threat Intel</span>
+            <span>SIEM</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Threat Intelligence Automation</h3>
+          <p>Developed Python scripts to automate threat intelligence feed integration with SIEM solutions.</p>
+          <a href=" https://tryhackme.com/p/Petras20" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="cta-section">
+      <p>Explore more of my projects on GitHub</p>
+      <a href="https://github.com/Petrasec2025" class="btn btn-primary" target="_blank"><i class="fab fa-github"></i> Visit GitHub</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="section-header">
+      <h2>Get In Touch</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:petrasec.cyber@gmail.com">petrasec.cyber@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h4>Location</h4>
+            <p>Dubai, UAE</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h4>Phone</h4>
+            <p>+971 54 456 0861</p>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/petras-cyber" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Petrasec2025" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://twitter.com/petrasec" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://wa.me/971544560861" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <form class="contact-form">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Subject">
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Petrasec — Where Cybersecurity Meets the Future</p>
+    <div class="footer-content">
+      <div class="footer-logo">PeTsec</div>
+      <p>Where Cybersecurity Meets the Future</p>
+      <div class="footer-links">
+        <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i> Back to Top</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2024 Petras Kulyumba. All rights reserved.
+      </div>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
