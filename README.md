@@ -1,6 +1,6 @@
 # 🔒 PeTsec | Cybersecurity Portfolio
 
-![Portfolio Preview](https://petrasec2025.github.io/Web-Dev-Portfolio/)
+![https://petrasec2025.github.io/Web-Dev-Portfolio/](https://petrasec2025.github.io/Web-Dev-Portfolio/)
 
 > Professional portfolio showcasing my cybersecurity expertise and web development skills
 
